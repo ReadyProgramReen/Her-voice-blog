@@ -2,6 +2,7 @@
 import { assets, blog_data } from '@/Assets/Assets/assets';
 import Footer from '@/Components/Footer';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 const page = ({params}) => {
@@ -28,7 +29,9 @@ const page = ({params}) => {
 
     <div className='bg-blue-100 py-5 px-5 md:px-12 lg:px-28'>
       <div className='flex justify-between items-center '>
+      <Link href={'/'}>
         <h1 className='text-3xl font-semibold text-white md:text-4xl lg:text-5xl p-2 rounded-2xl  border-4 border-sky-600 bg-sky-800'>"Her Voice"</h1>
+      </Link>  
         <button className='flex items-center p-2 font-medium py-1 px-3 sm:py-3 sm:px-6 rounded-md border-2 border-sky-800 hover:shadow-[0px_15px_40px_-8px_rgba(0,0,0,0.8)]'>Get Started<Image src={assets.arrow}/> </button>
 
       </div>
