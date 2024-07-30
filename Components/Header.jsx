@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <div className='py-5 px-5 md:px-12 lg:px-28'>
         <div className='flex justify-between item-center'>
-            <h1 className='text-3xl font-semibold text-sky-800 md:text-4xl lg:text-5xl'>"Her Voice"</h1>
-            <button className='flex items-center gap-2 font-medium rounded-md py-1 px-3 sm:py-3 sm:px-6 border-2 border-solid border-blue-400 '>
+            <h1 className='text-3xl font-semibold text-white md:text-4xl lg:text-5xl p-2 rounded-2xl  border-4 border-sky-600 bg-sky-800'>"Her Voice"</h1>
+            <button className='flex items-center gap-2 font-medium rounded-md py-1 px-3 sm:py-3 sm:px-6  hover:shadow-[0_35px_30px_-18px_rgba(0,0,0,0.5)]'>
                 Get Started <Image src={assets.arrow}/> </button>
         </div>
             <div className='text-center my-8'>
