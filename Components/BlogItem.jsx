@@ -1,3 +1,4 @@
+"use client"; // This is a client component 
 import { assets, blog_data } from '@/Assets/Assets/assets'
 import Image from 'next/image'
 import React from 'react'
