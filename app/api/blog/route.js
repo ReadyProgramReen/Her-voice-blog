@@ -25,7 +25,16 @@ export async function POST(req){
     const path = `./public/${timeStamp}_${image.name}`;
     await writeFile(path,buffer);
     const imgUrl = `/${timeStamp}_${image.name}`
-    console.log(imgUrl);
+
+    const blogData ={
+        title:`${formData.get('title')}`,
+        description:`${formData.get('description')}`,
+        category: `${formData.get('category')}`,
+        author:`${formData.get('author')}`,
+        image:`${imgUrl}`,
+        authorImg :`${formData.get('authorImg')}`
+    }
+
     return NextResponse.json({imgUrl})
 
 }
