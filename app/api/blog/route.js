@@ -1,4 +1,5 @@
 import { connectDB } from "@/server/config/db"
+import BlogModel from "@/server/models/BlogModel";
 
 const { NextResponse } = require("next/server")
 import {writeFile} from 'fs/promises'
@@ -35,6 +36,9 @@ export async function POST(req){
         authorImg :`${formData.get('authorImg')}`
     }
 
-    return NextResponse.json({imgUrl})
+    await BlogModel.create(blogData);
+    console.log('Blog Saved')
+
+    return NextResponse.json({success:true, msg :'Blog Added '})
 
 }
